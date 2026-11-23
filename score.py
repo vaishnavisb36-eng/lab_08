@@ -1,10 +1,13 @@
-n = int(input("Enter number of scores: "))
+
+import sys
+
+n = int(sys.argv[1])
 
 scores = []
 
 # Accept scores
 for i in range(n):
-    score = float(input("Enter score: "))
+    score = float(sys.argv[i + 2])
     scores.append(score)
 
 # Calculate sum
@@ -32,9 +35,5 @@ for score in scores:
     if score < minimum:
         minimum = score
 
-# Display results
 print("Maximum Score:", maximum)
 print("Minimum Score:", minimum)
-
-
-
